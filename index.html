@@ -125,6 +125,30 @@
         text-align: center;
       }
 
+      .btn-top {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background-color: var(--primary-color);
+        color: var(--accent-color);
+        size: 20px;
+        border-radius: 50%;
+        text-align: center;
+        margin: 10px;
+        margin-right: 15px;
+        padding: 10px;
+        padding-right: 25px;
+        width: 35px;
+        text-decoration: none;
+        margin-bottom: 30px;
+      }
+
+      .btn-top:hover {
+        background-color: var(--secondary-color);
+        color: black;
+      }
+
       .white {
         background-color: white;
         color: white;
@@ -180,27 +204,29 @@
       }
 
       .btn-main:hover {
-        background-color: var(--accent-color);
-        color: black;
+        background-color: var(--secondary-color);
+        color: var(--accent-color)
       }
 
       .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 15px;
       }
 
       .video {
         display: block;
         width: 100%;
+        border: 5px solid var(--primary-color);
       }
 
       footer {
-  margin-top: 45px;
-  margin-bottom: 15px;
+        margin-top: 45px;
+        margin-bottom: 15px;
 }
-.footer {
-  text-align: center;
-  align-items: center;
+      .footer {
+        text-align: center;
+        align-items: center;
 }
 
 .website {
@@ -251,16 +277,21 @@ footer .social-link:hover {
     </style>
   </head>
   <body>
-    <header class="home">
+    <header id="top" class="home">
       <h3>.Entertainment.</h3>
       <h1>Taylor Swift</h1>
-      <a href="#more">Learn more</a>
-      <a href="#music">Music</a>
-      <a href="#movies">Movies</a>
-      <a href="#awards">Awards</a>
+      <a href="#more" title="Learn More">Learn more</a>
+      <a href="#music" title="Music">Music</a>
+      <a href="#movies" title="Movies">Movies</a>
+      <a href="#awards" title="Awards">Awards</a>
     </header>
     <main>
       <section class="white">
+        <div class="container">
+          <a href="#top" class=" btn btn-top" title="Back to Top">
+            <i class="fa fa-arrow-up"></i>
+          </a>
+        </div>
         <div class="container">
           <div class="row">
             <div class="col-6">
@@ -270,7 +301,7 @@ footer .social-link:hover {
                 class="img-fluid"
               />
                <a
-                href="https://en.wikipedia.org/wiki/Taylor_Swift" target="_blank"
+                href="https://en.wikipedia.org/wiki/Taylor_Swift" target="_blank" title="Taylor Swift Wikipedia"
                 class="btn btn-white"
                 >Learn More about Taylor Swift</a
               >
@@ -398,7 +429,7 @@ footer .social-link:hover {
               />
               <a
                 href="https://en.wikipedia.org/wiki/Taylor_Swift_albums_discography"
-                class="btn btn-light" target="_blank"
+                class="btn btn-light" target="_blank" title="Taylor Swift Discography"
                 >Taylor Swift Discography</a
               >
             </div>
@@ -425,7 +456,7 @@ footer .social-link:hover {
             <div class="container">
           <div class="row">
             <div class="col-12">
-              <a href="" target="_blank" class="btn btn-main">
+              <a href="" target="_blank" class="btn btn-main" title="Taylor Swift Spotify">
                 Listen to Taylor Swift on Spotify! <i class="fa fa-spotify social social-link"></i>
               </a>
             </div>
@@ -435,12 +466,12 @@ footer .social-link:hover {
               <div class="row">
                 <div class="col-12">
                   <div class="grid">
-              <iframe src="https://www.youtube.com/embed/b1kbLwvqugk" class="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-               <iframe src="https://www.youtube.com/embed/tollGa3S0o8" class="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/b1kbLwvqugk" class="video" title="Anti-Hero" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+               <iframe src="https://www.youtube.com/embed/AgFeZr5ptV8" class="video" title="22" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                <iframe src="https://www.youtube.com/embed/VuNIsY6JdUw" class="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
-              <div class="row">
+              <div class="row mt-2">
                 <div class="col-12">
                   <div class="grid">
                   <iframe src="https://www.youtube.com/embed/nfWlot6h_JM" class="video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -456,7 +487,7 @@ footer .social-link:hover {
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <a href="" target="_blank" class="btn btn-main">Watch Taylor Swift Music Videos on YouTube <i class="fa fa-youtube social social-link"></i></a>
+                <a href="" target="_blank" class="btn btn-main" title="Taylor Swift on YouTube">Watch Taylor Swift Music Videos on YouTube <i class="fa fa-youtube social social-link"></i></a>
               </div>
             </div>
               </div>
@@ -472,7 +503,7 @@ footer .social-link:hover {
               <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/940/original/taylor-swift-movies.png?1672523155" class="img-fluid" alt="Taylor Swift Movie Shot">
               <a
             href="https://en.wikipedia.org/wiki/Taylor_Swift_videography" target="_blank"
-            class="btn btn-white"
+            class="btn btn-white" title="Taylor Swift Filmography"
             >Taylor Swift Filmography</a
           >
             </div>
@@ -575,7 +606,7 @@ footer .social-link:hover {
               <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/060/939/original/taylor-swift-grammys.png?1672522931" alt="Taylor Swift at Grammys" class="img-fluid">
               <a
             href="https://en.wikipedia.org/wiki/List_of_awards_and_nominations_received_by_Taylor_Swift" target="_blank"
-            class="btn btn-light"
+            class="btn btn-light" title="Awards & Achievements"
             >Awards & Achivements</a
           >
             </div>
@@ -587,19 +618,19 @@ footer .social-link:hover {
 
      <footer>
       <div class="social my-3">
-        <a href="https://www.taylorswift.com/" target="_blank" class="website">Taylor Swift Offical WebSite</a>
+        <a href="https://www.taylorswift.com/" target="_blank" class="website" title="Taylor Swift Offical Website">Taylor Swift Offical WebSite</a>
         <br>
-        <a href="https://www.facebook.com/TaylorSwift" target="_blank"><i class="fa fa-facebook social social-link"></i></a>
-        <a href="https://www.instagram.com/taylorswift/" target="_blank"><i class="fa fa-instagram social social-link"></i></a>
-        <a href="https://taylorswift.tumblr.com/" target="_blank"><i class="fa fa-tumblr social social-link"></i></a>
-        <a href="https://twitter.com/taylorswift13" target="_blank"><i class="fa fa-twitter social social-link"></i></a>
+        <a href="https://www.facebook.com/TaylorSwift" target="_blank" title="Facebook"><i class="fa fa-facebook social social-link"></i></a>
+        <a href="https://www.instagram.com/taylorswift/" target="_blank" title="Instagram"><i class="fa fa-instagram social social-link"></i></a>
+        <a href="https://taylorswift.tumblr.com/" target="_blank" title="Tumblr"><i class="fa fa-tumblr social social-link"></i></a>
+        <a href="https://twitter.com/taylorswift13" target="_blank" title="Twitter"><i class="fa fa-twitter social social-link"></i></a>
         
-        <a href="https://www.youtube.com/taylorswift" target="_blank"><i class="fa fa-youtube social social-link"></i></a>
+        <a href="https://www.youtube.com/taylorswift" target="_blank" title="YouTube"><i class="fa fa-youtube social social-link"></i></a>
       </div>
     </footer>
     <small class="open-source"
       >This site was coded by Cedra Wilson and is
-      <a href="https://github.com/rasheedawilson12/taylor-swiftr-landing-page.git" target="_blank"
+      <a href="https://github.com/rasheedawilson12/taylor-swiftr-landing-page.git" target="_blank" title="GitHub Souce Code Repository"
         >open-sourced</a
       ></small
     >
